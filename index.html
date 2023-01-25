@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8" />
+	<title>Typing speed test</title>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+	<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+	<div class="main outline">
+		<div class="h-container">
+			<h1>Typing speed test</h1>
+		</div>
+		<div class="stats-container">
+			<div class="timer">
+				<div class="timer-time"></div>
+				<svg>
+					<circle 
+					r="48" 
+					cx="50" 
+					cy="50" 
+					stroke-dasharray="301px"
+					stroke-dashoffset="0px"
+					stroke-width="2px"
+					stroke="black"
+					fill="none">
+					</circle>
+				</svg>
+			</div>
+			<div class="calclculate-container">
+				<div class="stats words-min" ></div>
+				<div class="stats chars-min" ></div>
+				<div class="stats accuracy" ></div>
+			</div>
+		</div>
+		<div class="typing">
+			<div class="typed-container outline"></div>
+			<div class="input-container outline"></div>
+		</div>
+		<div id="modal-container">
+			<div id="modal-content">
+				<span id="close-button">&times;</span>
+				<p></p>
+			</div>
+		</div>
+	</div>
+	<script src="scripts/main.js"></script>
+</body>
+
+</html>

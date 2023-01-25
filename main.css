@@ -1,0 +1,228 @@
+body {
+	background-color: rgb(243, 244, 245);
+}
+
+.input::before {
+	color: aqua;
+	position: absolute;
+	border: 1px solid red;
+	top: 20px;
+	overflow: visible;
+}
+
+.word-container {
+	text-align: center;
+	font-size: 24pt;
+	white-space: pre;
+	padding-right: 10px;
+	font-family: 'Heebo', sans-serif;
+}
+
+.incorrect {
+	text-decoration: line-through;
+}
+
+.completed {
+	color:lightsteelblue;
+}
+
+.input-container {
+	display: flex;
+	flex: 1 1 0;
+	overflow: hidden;
+}
+
+.input {
+	border: none;
+	outline: none;
+	padding-right: 1px;
+	caret-color: black;
+	color: rgb(0, 105, 167);
+}
+
+.typed-container {
+	flex: 1 1 0;
+	display: flex;
+	flex-direction: row-reverse;
+	overflow: hidden;
+}
+
+.typing {
+	display: flex;
+	padding: 30px 50px;
+	max-width: 40%;
+	margin: 0 auto;
+	border-radius: 10px;
+	background-color: white;
+	box-shadow:
+		rgba(17, 17, 26, 0.1) 0px 4px 16px,
+		rgba(17, 17, 26, 0.1) 0px 8px 24px,
+		rgba(17, 17, 26, 0.1) 0px 16px 56px;
+	
+}
+
+.main {
+	font-family: Montserrat;
+	margin: 0 auto;
+}
+
+.h-container {
+	text-align: center;
+}
+
+.outlinee {
+	outline-color: rgb(0, 0, 0);
+	outline-style: dashed;
+	outline-width: 1px;
+}
+
+.stats-container {
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	max-width: 500px;
+	padding: 20px 0 40px 0;
+	position: relative;
+}
+
+.stats {
+	border-radius: 15px;
+	text-align:center;
+	line-height:60px;
+	width:60px;
+	height:60px;
+	font-size:28px;
+	font-weight: bold;
+	background-color: white;
+}
+
+.calclculate-container {
+	display: flex;
+	width: 50%;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 50px;
+}
+
+.words-min {
+	position: relative;
+}
+
+.words-min::after{
+	content: "words/min";
+	position: absolute;
+	bottom: -40px;
+	left: -2px;
+	font-weight: normal;
+	font-size: 12px;
+}
+
+.chars-min {
+	position: relative;
+}
+
+.chars-min::after{
+	content: "chars/min";
+	position: absolute;
+	bottom: -40px;
+	left: 0px;
+	font-weight: normal;
+	font-size: 12px;
+}
+
+.accuracy {
+	position: relative;
+}
+
+.accuracy::after{
+	content: "accuracy%";
+	position: absolute;
+	bottom: -40px;
+	left: 0px;
+	font-weight: normal;
+	font-size: 12px;
+}
+
+.timer {
+	position: relative;
+	margin: auto;
+	height: 100px;
+	width: 100px;
+	text-align: center;
+	font-size:26px;
+	font-weight: bold;
+}
+
+.timer::after {
+	content: "seconds";
+	position: absolute;
+	bottom: 23px;
+	left: 25px;
+	font-weight: normal;
+	font-size: 12px;
+}
+
+.timer-time {
+	color: black;
+	display: inline-block;
+	line-height: 100px;
+}
+
+svg {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 100px;
+	height: 100px;
+	transform: rotate(-90deg);
+	
+}
+
+#modal-trigger {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+  }
+
+#modal-container {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+  }
+
+  /* Style the modal content */
+  #modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+	border-radius: 10px;
+    width: 20%; /* Could be more or less, depending on screen size */
+  }
+
+  /* Style the close button */
+  #close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+
+  #close-button:hover,
+  #close-button:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
